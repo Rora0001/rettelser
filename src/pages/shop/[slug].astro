@@ -42,6 +42,11 @@ console.log(myData);
       </div>
       <h4>Description</h4>
       <p>{myData.Description}</p>
+      <div class="læs-knap">
+        <ul>
+          <li><a href="/shop.astro">← BACK</a></li>
+        </ul>
+      </div>
     </div>
   </div>
   <Footer />
@@ -94,6 +99,13 @@ console.log(myData);
   .content p {
     margin-bottom: 4rem;
     text-align: left;
+  }
+
+  .læs-knap a {
+    color: black;
+  }
+  .læs-knap {
+    left: 0;
   }
 
   @media (min-width: 768px) {
