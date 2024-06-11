@@ -3,18 +3,25 @@ import Buttons from "./Buttons.astro";
 const { data } = Astro.props;
 ---
 
-<a class="container" href={data.href}>
+<div class="container">
   <div>
     <div class="tekst">
       <h3>{data.title}</h3>
       <p>{data.subtitles}</p>
       {data.lillebillede && <img class="lillebillede" src={data.lillebillede} alt="Lille billede" />}
+      {
+        data.button && (
+          <a href={data.href} class="knapforside">
+            {data.button}
+          </a>
+        )
+      }
     </div>
   </div>
   <div class="bigImgContainer">
     <img src={data.cardImages} alt="Card billede" />
   </div>
-</a>
+</div>
 
 <style>
   .container {
@@ -119,7 +126,7 @@ const { data } = Astro.props;
       margin: 10px 0;
     }
     .tekst {
-      max-width: 200px;
+      max-width: 300px;
     }
 
     img[src*="data.cardImages"] {
