@@ -27,6 +27,11 @@ console.log(myData);
   <div class="content">
     <!-- Billede sektion -->
     <div class="image-section">
+      <div class="læs-knap">
+        <ul>
+          <li><a href="/shop">← BACK</a></li>
+        </ul>
+      </div>
       <img src={myData.Image} alt="Product Image" />
     </div>
 
@@ -42,11 +47,6 @@ console.log(myData);
       </div>
       <h4>Description</h4>
       <p>{myData.Description}</p>
-      <div class="læs-knap">
-        <ul>
-          <li><a href="/shop">← BACK</a></li>
-        </ul>
-      </div>
     </div>
   </div>
   <Footer />
@@ -108,6 +108,7 @@ console.log(myData);
     text-align: left;
     font-size: 16px;
     font-family: karla;
+    padding-top: 3rem;
   }
 
   @media (min-width: 768px) {
